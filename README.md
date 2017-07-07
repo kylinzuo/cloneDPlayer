@@ -1,5 +1,5 @@
 # DPlayer
-
+基于DPlayer 修改的插件
 [![npm](https://img.shields.io/npm/v/dplayer.svg?style=flat-square)](https://www.npmjs.com/package/dplayer)
 [![npm](https://img.shields.io/npm/l/dplayer.svg?style=flat-square)](https://github.com/DIYgod/DPlayer/blob/master/LICENSE)
 [![devDependency Status](https://img.shields.io/david/dev/DIYgod/dplayer.svg?style=flat-square)](https://david-dm.org/DIYgod/DPlayer#info=devDependencies)
@@ -39,6 +39,48 @@ $ npm install dplayer --save
 ## Quick Start
 
 ```js
+配置项： 
+    autoplay: false,
+    theme: 'tranparent',
+    loop: false,
+    lang: navigator.language.indexOf('zh') !== -1 ? 'zh' : 'en',
+    // 展示屏幕截图
+    screenshot: false,
+    // 控制条颜色
+    controllBarColor: 'tranparent',
+    hotkey: false,
+    preload: 'auto',
+    type: 'h5',
+    h5Config: {
+        showRefresh: true,
+        showExpand: true,
+        showBar: true
+    },
+    pcConfig: {
+        // 展示在线人数
+        showOnLine: false,
+        onlineNumber: '1111人',
+        // 展示弹幕
+        showComment: false,
+        // 展示时间轴
+        showBar: false,
+        // 展示设置
+        showSetting: false,
+        // 是否显示多种分辨率
+        showQuality: false,
+        // 是否展示刷新按钮
+        refreshButton: true,
+        // 是否展示动漫库
+        showDanmaku: false,
+        showContextmenu: false,
+    },
+    apiBackend: defaultApiBackend,
+    contextmenu: [
+        {
+            text: '菜单',
+            link: ''
+        }
+    ]
 var dp = new DPlayer({
     element: document.getElementById('player1'),
     video: {
